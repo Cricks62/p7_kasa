@@ -1,0 +1,30 @@
+.containerCollapse {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px
+}
+
+.container {
+    max-width: 1024px;
+}
+
+.title {
+    background-color: #ff6060;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.content {
+    background: #f7f7f7;
+    border-radius: 5px;
+    color: #ff6060;
+    overflow: hidden;
+    padding: 0 18px;
+}
