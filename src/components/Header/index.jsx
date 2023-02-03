@@ -2,21 +2,19 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/logo.png"
 import color from "../../styles/color";
+import '../Header/index.css'
 
-const NavContainer = styled.div`
-  padding: 30px 30px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+
 
 const StyledLink = styled(Link)`
   color: ${color.red};
   text-decoration: none;
-  text-align: center;
   font-size: 24px;
   &.active {
     text-decoration: underline;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
   }
 `;
 
@@ -26,12 +24,12 @@ function Header() {
   const location = useLocation();
 
   return (
-    <header>
-      <NavContainer>
+    <header className="header">
+      <div className="container">
         <Link to="/">
-          <img src={logo} alt="logo Kasa" />
+          <img className="logo" src={logo} alt="logo Kasa" />
         </Link>
-        <nav>
+        <nav className="navContainer">
           <StyledLink to="/" className={location.pathname === "/" ? "active" : ""}>
             Accueil
           </StyledLink>
@@ -39,7 +37,7 @@ function Header() {
             A Propos
           </StyledLink>
         </nav>
-      </NavContainer>
+      </div>
     </header>
   );
 }

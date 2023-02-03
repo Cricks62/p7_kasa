@@ -5,10 +5,12 @@ import data from '../../datas/logements.json'
 
 function Card({ item }) {
     return (
-      <div className="card">
+      <div className="contenaire_card">
         <a href={`/logement/${item.id}`}>
-        <h3 className="titre_card">{item.title}</h3>
-        <img className='img_card' src={item.cover} alt="appartement" />
+          <div className="card">
+            <h3 className="titre_card">{item.title}</h3>
+            <img className='img_card' src={item.cover} alt="appartement" />
+          </div>
         </a>
       </div>
     );
