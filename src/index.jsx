@@ -7,7 +7,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import Footer from './components/Footer';
 import About from './pages/About';
 import Error from './pages/Error'
-import Location from './pages/location';
+import Location from './pages/location/index.jsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
