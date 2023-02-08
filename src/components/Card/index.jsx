@@ -4,17 +4,19 @@ import data from '../../datas/logements.json'
 
 
 function Card({ item }) {
-    return (
-      <div className="contenaire_card">
-        <a href={`/logement/${item.id}`}>
-          <div className="card">
+  return (
+    <div className="contenaire_card">
+      <a href={`/logement/${item.id}`}>
+        <div className="card">
+          <img className='img_card' src={item.cover} alt="appartement" />
+          <div className="overlay"> 
             <h3 className="titre_card">{item.title}</h3>
-            <img className='img_card' src={item.cover} alt="appartement" />
           </div>
-        </a>
-      </div>
-    );
-  }
+        </div>
+      </a>
+    </div>
+  );
+}
   
   export default function App() {
     return (

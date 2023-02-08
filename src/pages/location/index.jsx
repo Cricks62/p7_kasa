@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import data from '../../datas/logements.json'
 import Carousel from "../../components/Carrousel";
+import './index.css'
 
 
 
@@ -10,30 +11,35 @@ function Location() {
     const { idLogement } = useParams();
     let Logement = data.filter((e) => e.id === idLogement);
     const logement = Logement.shift();
-    console.log(logement)
 
     
 
     return (
-      <div> 
-        <div>
+      <section className="containersection"> 
           <Carousel items={logement.pictures} />
-            <h2>{logement.title}</h2>
-            <p>{logement.location} </p>
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt="" />
-        </div>
-        <div>
-          <div className='tags-wrapper'>
-            {logement.tags.map((tag, index) => (
-              <span key={ 'tag-' && index }> { tag } </span>
-              ))}
+          <div className="containerhead">
+            <div className="titlelocalisation">
+              <h2 className="titlelogement">{logement.title}</h2>
+              <p className="localisation">{logement.location} </p>
+              <div className='tags-wrapper'>
+              {logement.tags.map((tag, index) => (
+                <span key={ 'tag-' && index }> { tag } </span>
+                ))}
+              </div>
+            </div>
+            <div className="containerhost">
+              <div className="host">
+                <p>{logement.host.name}</p>
+                <img src={logement.host.picture} alt=""  className="imghost"/>
+              </div>
+              <div>
+                <p>{logement.rating}</p>
+              </div>
+            </div>
           </div>
-            <p>{logement.rating}</p>
-        </div>
-        <div>
-            <Collapse title="Description">{logement.description}</Collapse>
-            <Collapse title="Equipement">
+        <div className="containercollapse">
+            <Collapse className="containerdesc" title="Description">{logement.description}</Collapse>
+            <Collapse className="containerequip" title="Equipement">
               <ul>
                 {logement.equipments.map((equip, index) => (
               <li key={ 'equip' && index }> { equip } </li>
@@ -41,7 +47,7 @@ function Location() {
               </ul>
             </Collapse> 
         </div>
-      </div>
+      </section>
     );
   };
 
