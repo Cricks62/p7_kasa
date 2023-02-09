@@ -11,6 +11,9 @@ function Location() {
     const { idLogement } = useParams();
     let Logement = data.filter((e) => e.id === idLogement);
     const logement = Logement.shift();
+    const host = logement.host;
+    const [firstName, lastName] = host.name.split(' ');
+    console.log(firstName, lastName)
 
     
 
@@ -23,13 +26,16 @@ function Location() {
               <p className="localisation">{logement.location} </p>
               <div className='tags-wrapper'>
               {logement.tags.map((tag, index) => (
-                <span key={ 'tag-' && index }> { tag } </span>
+                <span className="tags" key={ 'tag-' && index }> { tag } </span>
                 ))}
               </div>
             </div>
             <div className="containerhost">
               <div className="host">
-                <p>{logement.host.name}</p>
+                <div className="name">
+                  <p>{firstName}</p>
+                  <p>{lastName}</p>
+                </div>
                 <img src={logement.host.picture} alt=""  className="imghost"/>
               </div>
               <div>
@@ -38,9 +44,9 @@ function Location() {
             </div>
           </div>
         <div className="containercollapse">
-            <Collapse className="containerdesc" title="Description">{logement.description}</Collapse>
-            <Collapse className="containerequip" title="Equipement">
-              <ul>
+            <Collapse classCSS="containerdesc" title="Description">{logement.description}</Collapse>
+            <Collapse classCSS="containerequip" title="Equipement">
+              <ul className="liste">
                 {logement.equipments.map((equip, index) => (
               <li key={ 'equip' && index }> { equip } </li>
               ))}

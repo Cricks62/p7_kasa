@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './index.css'
+import arrowsB from '../../assets/arrow_back.png'
+import arrowsF from '../../assets/arrow_forward.png'
 
 const Carousel = ({ items }) => {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex(index === items.length - 1 ? 0 : index + 1);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [index, items.length]);
 
   const handleNext = () => {
     setIndex(index === items.length - 1 ? 0 : index + 1);
@@ -12,10 +22,13 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div>
-      <button onClick={handlePrev}>Précédent</button>
-      <div><img src={items[index]} alt="" /></div>
-      <button onClick={handleNext}>Suivant</button>
+    <div className='container-carrousel'>
+      <button className="carousel-button-back" onClick={handlePrev}><img src={arrowsB} alt="fleche" /></button>
+      <div className="carousel-item">
+        <img className='imagecarou' src={items[index]} alt="" />
+        <div className="carousel-number">{index + 1}/{items.length}</div>
+      </div>
+      <button className="carousel-button-forward" onClick={handleNext}><img src={arrowsF} alt="fleche" /></button>
     </div>
   );
 };

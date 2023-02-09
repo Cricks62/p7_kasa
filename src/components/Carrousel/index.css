@@ -1,0 +1,40 @@
+.container-carrousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1240px;
+  }
+  
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.carousel-number {
+    color: white;
+    background-color: red;
+  }
+  
+.carousel-button-back {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.carousel-button-forward {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.imagecarou {
+    height: 415px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
