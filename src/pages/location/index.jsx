@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import data from '../../datas/logements.json'
 import Carousel from "../../components/Carrousel";
 import './index.css'
+import Stars from "../../components/Star";
 
 
 
@@ -39,7 +40,7 @@ function Location() {
                 <img src={logement.host.picture} alt=""  className="imghost"/>
               </div>
               <div>
-                <p>{logement.rating}</p>
+                <Stars className='test' rating={logement.rating} />
               </div>
             </div>
           </div>

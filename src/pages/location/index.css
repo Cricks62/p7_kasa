@@ -69,14 +69,14 @@
 .tags-wrapper {
     padding: 15px 0;
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .tags {
     background-color: #ff6060;
-    border-radius: 10px;
+    border-radius: 25px;
     color: white;
-    padding: 0 15px;
+    padding: 5px 20px;
 }
 
 .liste {

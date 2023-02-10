@@ -4,6 +4,7 @@
     justify-content: center;
     width: 100%;
     max-width: 1240px;
+    position: relative;
   }
   
 .carousel-item {
@@ -14,7 +15,11 @@
 
 .carousel-number {
     color: white;
-    background-color: red;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 90%;
+    font-size: 18px;
   }
   
 .carousel-button-back {
@@ -22,14 +27,20 @@
     border: none;
     cursor: pointer;
     position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
 }
+
 
 .carousel-button-forward {
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: absolute;
-
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
 }
 
 .imagecarou {
@@ -37,4 +48,17 @@
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
+}
+
+.carrousel-arrows {
+    position: absolute;
+    height: 415px;
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-arrows {
+    width: 100%;
 }
