@@ -62,3 +62,18 @@
 .container-arrows {
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .imgarrows {
+        width: 20px;
+        height: 12px;
+    }
+
+    .imagecarou {
+       height: 255px;
+    }
+
+    .carousel-number {
+        visibility: hidden;
+    }
+}

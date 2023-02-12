@@ -8,7 +8,7 @@ import Collapse from "../../components/Collapse";
 const About = () => {
     return (
         <><div className="imgtoppages">
-            <img src={img} alt="fond de titre"></img>
+            <img className="imghead" src={img} alt="fond de titre"></img>
         </div>
         <section className="containerCollapse">
             <div className="containercol">

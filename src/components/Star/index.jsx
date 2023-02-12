@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css'
 
 const Star = ({ selected }) => (
     <img
+      className='imgStars'
       src={selected ? require('../../assets/EtoileRouge.png') : require('../../assets/EtoileGrise.png')}
       alt="star"
-      style={{ width: '30px', height: '30px' }}
     />
   );
 
@@ -14,7 +15,7 @@ const Stars = ({ rating }) => {
     stars.push(<Star key={i} selected={i < rating} />);
   }
   return (
-    <div style={{ display: 'flex', paddingTop: '10px'}}>
+    <div  className='containerStars'>
       {stars}
     </div>
   );

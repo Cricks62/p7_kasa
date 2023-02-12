@@ -30,10 +30,10 @@ const Carousel = ({ items }) => {
       </div>
       <div className='carrousel-arrows'>
         <div className='container-arrows'>
-          <button className="carousel-button-back" onClick={handlePrev}><img src={arrowsB} alt="fleche" /></button>
+          <button className="carousel-button-back" onClick={handlePrev}><img className='imgarrows' src={arrowsB} alt="fleche" /></button>
         </div>
         <div className='container-arrows'>
-          <button className="carousel-button-forward" onClick={handleNext}><img src={arrowsF} alt="fleche" /></button>
+          <button className="carousel-button-forward" onClick={handleNext}><img className='imgarrows' src={arrowsF} alt="fleche" /></button>
         </div>
       </div>
     </div>

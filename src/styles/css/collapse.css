@@ -23,6 +23,12 @@
     width: 100%;
 }
 
+.imghead {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 10px;
+}
+
 .title img {
     float: right;
     position: relative;
@@ -41,4 +47,17 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 18px 21px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: .8rem;
+    }
+    .content {
+        font-size: .75rem;
+    }
+    .imghead {
+        height: 223px;
+        
+    }
 }

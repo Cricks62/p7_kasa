@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: space-between;
 }
 
 .name {
@@ -85,4 +86,49 @@
 
 .content {
     height: 200px;
+}
+
+@media screen and (max-width: 768px ) {
+    .titlelogement {
+        font-size: 18px;
+    }
+    
+    .localisation {
+        font-size: 14px;
+    }
+
+    .tags-wrapper {
+        font-size: 10px;
+    }
+
+    .containerhead {
+        flex-direction: column;
+    }
+
+    .containerhost {
+        flex-direction: row-reverse;
+        justify-content: inherit;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .imghost {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .containercollapse {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .containerdesc {
+        padding: 0 10px;
+    }
+    
+    .containerequip {
+        padding: 0 10px;
+    }
 }

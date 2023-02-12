@@ -1,0 +1,16 @@
+.imgStars {
+    width: 30px;
+    height: 30px;
+}
+
+.containerStars {
+    display: flex;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .imgStars {
+        width: 15px;
+        height: 15px;
+    }
+}

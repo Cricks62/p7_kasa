@@ -14,7 +14,6 @@ function Location() {
     const logement = Logement.shift();
     const host = logement.host;
     const [firstName, lastName] = host.name.split(' ');
-    console.log(firstName, lastName)
 
     
 
