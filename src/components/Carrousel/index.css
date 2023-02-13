@@ -76,4 +76,8 @@
     .carousel-number {
         visibility: hidden;
     }
+
+    .carrousel-arrows {
+        height: 200px;
+    }
 }

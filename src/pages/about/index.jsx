@@ -1,7 +1,6 @@
 import React from "react";
 import img from "../../assets/Mask_Group.png"
-import '../../styles/css/image.css'
-import '../../styles/css/collapse.css'
+import '../../components/Collapse/index.css'
 import Collapse from "../../components/Collapse";
 
 

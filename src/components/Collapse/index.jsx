@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import arrows from '../../assets/VectorBas.png'
 import arrowsH from '../../assets/VectorHaut.png'
+import '../Collapse/index.css'
 
 const Collapse = ({ classCSS, title, children }) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -12,7 +13,7 @@ const Collapse = ({ classCSS, title, children }) => {
             {title} {isCollapsed ? <img src={arrows} alt="test" />: <img src={arrowsH} alt="test" /> }
             </h3>
         <div className={classCSS}></div>
-        {!isCollapsed && <p className="content">{children}</p>}
+        {!isCollapsed && <div className="content">{children}</div>}
         </div>
         </>
        

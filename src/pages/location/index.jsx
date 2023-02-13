@@ -3,19 +3,39 @@ import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import data from '../../datas/logements.json'
 import Carousel from "../../components/Carrousel";
+import Error from "../Error/index.jsx";
 import './index.css'
 import Stars from "../../components/Star";
 
 
 
+
 function Location() {
     const { idLogement } = useParams();
+    
+
+    if (!idLogement) {
+      return (
+          <> 
+            <Error /> 
+          </>
+        )
+      }
+
+    let logementsIds = data.reduce((acc, curVal) => acc.concat(curVal.id), []);
+
+    if(logementsIds.includes(idLogement) === false) {
+        return (
+          <> 
+            <Error /> 
+          </>
+        )
+      }
+
     let Logement = data.filter((e) => e.id === idLogement);
     const logement = Logement.shift();
     const host = logement.host;
     const [firstName, lastName] = host.name.split(' ');
-
-    
 
     return (
       <section className="containersection"> 

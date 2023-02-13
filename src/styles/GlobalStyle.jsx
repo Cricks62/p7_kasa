@@ -13,6 +13,24 @@ const StyledGlobalStyle = createGlobalStyle`
       display: flex;
       flex-direction: column;
      }
+
+     .imgtoppages { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .imagetitre {
+      min-width: 100%;
+      height: 225px
+  }
+  
+  @media screen and ( max-width: 768px) {
+      .imagetitre {
+          height: 115px;
+          min-width: 100%;
+      }
+      
+  }
 `
 function GlobalStyle() {
   

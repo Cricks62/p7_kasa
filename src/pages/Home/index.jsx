@@ -1,6 +1,5 @@
 import React from 'react';
 import img from '../../assets/img.png'
-import '../../styles/css/image.css'
 import '../Home/index.css'
 import '../../components/Card/index.css'
 import Card from '../../components/Card/index'

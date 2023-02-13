@@ -58,6 +58,13 @@
     }
     .imghead {
         height: 223px;
-        
+    }
+
+    .title img {
+        top: 0;
+    }
+
+    .imghead {
+        height: 115px;
     }
 }
