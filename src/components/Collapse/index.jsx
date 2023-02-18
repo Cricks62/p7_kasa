@@ -10,7 +10,7 @@ const Collapse = ({ classCSS, title, children }) => {
         <>
         <div className={classCSS}>
             <h3 className="title" onClick={() => setIsCollapsed(!isCollapsed)}>
-            {title} {isCollapsed ? <img src={arrows} alt="test" />: <img src={arrowsH} alt="test" /> }
+            {title} {isCollapsed ? <img src={arrows} alt="Fleche vers le bas" />: <img src={arrowsH} alt="Fleche vers le haut" /> }
             </h3>
         <div className={classCSS}></div>
         {!isCollapsed && <div className="content">{children}</div>}

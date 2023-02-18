@@ -1,22 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import styled from "styled-components";
 import logo from "../../assets/logo.png"
-import color from "../../styles/color";
 import '../Header/index.css'
 
 
 
-const StyledLink = styled(Link)`
-  color: ${color.red};
-  text-decoration: none;
-  font-size: 24px;
-  &.active {
-    text-decoration: underline;
-  }
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
-`;
 
 
 
@@ -30,12 +17,12 @@ function Header() {
           <img className="logo" src={logo} alt="logo Kasa" />
         </Link>
         <nav className="navContainer">
-          <StyledLink to="/" className={location.pathname === "/" ? "active" : ""}>
+        <Link to="/" className={`lienHead ${location.pathname === "/" ? "active" : ""}`}>
             Accueil
-          </StyledLink>
-          <StyledLink to="/About" className={location.pathname === "/About" ? "active" : ""}>
+          </Link>
+          <Link to="/About" className={`lienHead ${location.pathname === "/About" ? "active" : ""}`}>
             A Propos
-          </StyledLink>
+          </Link>
         </nav>
       </div>
     </header>

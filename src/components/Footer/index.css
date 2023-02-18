@@ -1,0 +1,20 @@
+.FooterContainer {
+    background-color: black;
+}
+
+.ContainerInfo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 30px 30px;
+}
+
+.FooterLogo {
+    width: 150px;
+}
+
+.TextFooter {
+    color: white;
+    margin-top: 30px;
+}
