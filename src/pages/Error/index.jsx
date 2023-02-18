@@ -1,16 +1,16 @@
 import React from "react";
 import img from '../../assets/404.png'
-import './index.css'
+import '../Error/index.css'
 
 
 
 
 const Error = () => {
     return (
-        <div classname='containerError'>
+        <div className="containerError">
             <img className="imgerror" src={img} alt="Erreur" />
             <h2 className="titleError">Oups! La page que vous demandez n'existe pas.</h2>
-            <a  className='lienAcceuil' href="/">Retourner sur la page d'acceuil</a>
+            <a  className="lienAcceuil" href="/">Retourner sur la page d'acceuil</a>
         </div>
     );
 };
